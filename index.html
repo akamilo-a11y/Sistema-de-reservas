@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mario 64 - Sistema de Reservas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <!-- Login Screen -->
+    <div id="login-screen">
+        <div class="login-card">
+            <img src="images/star.svg" alt="Estrella" class="login-logo">
+            <div class="star-divider">★ ★ ★</div>
+            <h1>Restaurante</h1>            <div class="login-subtitle">Sistema de Reservas</div>
+            <div class="star-divider">★</div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-usuario">Usuario</label>
+                    <input type="text" id="login-usuario" placeholder="Ingrese su usuario" required autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" placeholder="Ingrese su contraseña" required autocomplete="current-password">
+                </div>
+                <div id="login-error"></div>
+                <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.5rem;">★ Iniciar Sesión ★</button>
+            </form>
+            <div class="login-demo">
+                <strong>Usuarios demo:</strong><br>
+                admin / admin123<br>
+                mesero / mesero123<br>
+                cocina / cocina123<br>
+                despacho / despacho123
+            </div>
+            <figure class="login-mushroom"><img src="images/mushroom.svg" alt=""></figure>
+        </div>
+    </div>
+
+    <!-- App Screen -->
+    <div id="app-screen">
+        <div class="app-layout">
+            <!-- Sidebar Overlay (mobile) -->
+            <div id="sidebar-overlay"></div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <img src="images/star.svg" alt="Estrella" class="star-ico">
+                    <h2>SM64</h2>
+                    <small>Restaurante</small>
+                </div>
+                <nav class="sidebar-nav" id="sidebar-nav"></nav>
+                <div class="sidebar-footer">
+                    <button id="logout-btn" class="btn">★ Salir ★</button>
+                </div>
+            </aside>
+
+            <!-- Main Area -->
+            <main class="main-area">
+                <header class="topbar">
+                    <div class="topbar-left">
+                        <button id="sidebar-toggle">☰</button>
+                        <img src="images/coin.svg" alt="Moneda" class="topbar-logo">
+                        <div id="user-info"></div>
+                    </div>
+                </header>
+                <div id="main-content"></div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Scripts (orden importa) -->
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/modules.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

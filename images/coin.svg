@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="coinY" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe680"/>
+      <stop offset="1" stop-color="#f0a818"/>
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="38" fill="url(#coinY)" stroke="#b8761a" stroke-width="4"/>
+  <circle cx="50" cy="50" r="24" fill="none" stroke="#b8761a" stroke-width="3"/>
+  <text x="50" y="63" font-family="Arial, sans-serif" font-size="38" font-weight="bold"
+        text-anchor="middle" fill="#b8761a">1</text>
+</svg>
